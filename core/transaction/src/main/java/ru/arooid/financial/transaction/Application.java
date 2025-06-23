@@ -1,4 +1,4 @@
-package ru.arooid.financial.gateway;
+package ru.arooid.financial.transaction;
 
 import io.micronaut.runtime.Micronaut;
 

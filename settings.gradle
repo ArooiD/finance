@@ -5,6 +5,7 @@ include(":infra:kcsql")
 include(":infra:keycloak")
 include(":infra:nginx")
 include(":infra:psql")
+include(":infra:nats")
 
 include(":core:account")
 include(":core:audit")

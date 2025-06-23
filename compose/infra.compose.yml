@@ -24,6 +24,11 @@ services:
       context: ../infra/psql
       dockerfile: Dockerfile
 
+  infra-nats:
+    build:
+      context: ../infra/nats
+      dockerfile: Dockerfile
+
   infra-ca:
     image: smallstep/step-ca
     ports:

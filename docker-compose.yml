@@ -1,0 +1,4 @@
+name: "finance"
+include:
+  - compose/infra.compose.yml
+  - compose/core.compose.yml

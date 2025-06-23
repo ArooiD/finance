@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/account/ZeroTrust.core.account.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/account/ZeroTrust.core.account.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/audit/ZeroTrust.core.audit.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/audit/ZeroTrust.core.audit.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/gateway/ZeroTrust.core.gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/gateway/ZeroTrust.core.gateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/transaction/ZeroTrust.core.transaction.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/transaction/ZeroTrust.core.transaction.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/user/ZeroTrust.core.user.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/user/ZeroTrust.core.user.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/gateway/gateway.iml" filepath="$PROJECT_DIR$/core/gateway/gateway.iml" />
+    </modules>
+  </component>
+</project>

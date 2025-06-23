@@ -1,0 +1,35 @@
+services:
+  infra-kafka:
+    build:
+      context: ../infra/kafka
+      dockerfile: Dockerfile
+
+  infra-kcsql:
+    build:
+      context: ../infra/kcsql
+      dockerfile: Dockerfile
+
+  infra-keycloak:
+    build:
+      context: ../infra/keycloak
+      dockerfile: Dockerfile
+
+  infra-nginx:
+    build:
+      context: ../infra/nginx
+      dockerfile: Dockerfile
+
+  infra-psql:
+    build:
+      context: ../infra/psql
+      dockerfile: Dockerfile
+
+  infra-ca:
+    image: smallstep/step-ca
+    ports:
+      - 9000:9000
+    environment:
+      DOCKER_STEPCA_INIT_NAME: "ca.local"
+      DOCKER_STEPCA_INIT_DNS_NAMES: "localhost,ca.local,step-ca"
+    volumes:
+      - ../infra/ca:/home/step

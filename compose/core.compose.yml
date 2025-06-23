@@ -1,0 +1,52 @@
+services:
+  core-account:
+    build:
+      context: ../core/account
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+    platform: linux/amd64
+    volumes:
+      - ../gradle.properties:/app/gradle.properties
+      - ../core/account/build:/app/build
+
+  core-audit:
+    build:
+      context: ../core/audit
+      dockerfile: Dockerfile
+    volumes:
+      - ../gradle.properties:/app/gradle.properties
+      - ../core/audit/build:/app/build
+
+  core-gateway:
+    build:
+      context: ../core/gateway
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+    platform: linux/amd64
+    volumes:
+      - ../gradle.properties:/app/gradle.properties
+      - ../core/gateway/build:/app/build
+
+  core-transaction:
+    build:
+      context: ../core/transaction
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+    platform: linux/amd64
+    volumes:
+      - ../gradle.properties:/app/gradle.properties
+      - ../core/transaction/build:/app/build
+
+  core-user:
+    build:
+      context: ../core/user
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+    platform: linux/amd64
+    volumes:
+      - ../gradle.properties:/app/gradle.properties
+      - ../core/user/build:/app/build

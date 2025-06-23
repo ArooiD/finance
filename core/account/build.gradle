@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow'
+    id 'io.micronaut.application'
+}
+
+group = 'ru.arooid.financial'
+version = '0.1'
+sourceCompatibility = '17'
+
+application {
+    mainClass = "ru.arooid.financial.gateway.Application"
+}
+
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+micronaut {
+    version("4.8.3")
+    runtime("netty")
+}
+
+dependencies {
+
+    implementation "io.micronaut:micronaut-runtime"
+    implementation "io.micronaut:micronaut-inject"
+    implementation "io.micronaut:micronaut-jackson-databind"
+    implementation "io.micronaut:micronaut-http-server-netty"
+    implementation "io.micronaut:micronaut-http-client"
+    implementation "io.micronaut.reactor:micronaut-reactor"
+    implementation "io.micronaut.security:micronaut-security"
+    implementation "io.micronaut.security:micronaut-security-jwt"
+    runtimeOnly "io.micronaut.validation:micronaut-validation"
+
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+}
+
+test {
+    useJUnitPlatform()
+}

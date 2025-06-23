@@ -1,0 +1,13 @@
+rootProject.name = 'ZeroTrust'
+
+include(":infra:kafka")
+include(":infra:kcsql")
+include(":infra:keycloak")
+include(":infra:nginx")
+include(":infra:psql")
+
+include(":core:account")
+include(":core:audit")
+include(":core:gateway")
+include(":core:transaction")
+include(":core:user")

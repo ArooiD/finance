@@ -1,4 +1,23 @@
 services:
+  infra-keycloak:
+    container_name: keycloak
+    build:
+      context: ../infra/keycloak
+      dockerfile: Dockerfile
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "7777:7777"
+    env_file:
+      - ../.env
+    restart: always
+
+  infra-nats:
+    build:
+      context: ../infra/nats
+      dockerfile: Dockerfile
+
   infra-kafka:
     build:
       context: ../infra/kafka
@@ -7,11 +26,6 @@ services:
   infra-kcsql:
     build:
       context: ../infra/kcsql
-      dockerfile: Dockerfile
-
-  infra-keycloak:
-    build:
-      context: ../infra/keycloak
       dockerfile: Dockerfile
 
   infra-nginx:

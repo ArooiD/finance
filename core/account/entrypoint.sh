@@ -2,7 +2,7 @@
 
 run_app() {
   echo "Запускаем приложение..."
-  java -jar build/libs/account-0.1-all.jar &
+  java -jar /app/app.jar &
   APP_PID=$!
 }
 
@@ -15,7 +15,9 @@ shutdown_app() {
 }
 
 # Убедимся, что jar уже существует
-if [ ! -f build/libs/account-0.1-all.jar ]; then
+echo "step 1" && ls -la /app
+
+if [ ! -f /app/app.jar ]; then
   echo "Файл jar не найден. Сначала соберите проект."
   exit 1
 fi
@@ -23,7 +25,7 @@ fi
 run_app
 
 # Следим только за файлом jar
-while inotifywait -e modify build/libs/account-0.1-all.jar; do
+while inotifywait -e modify /app/app.jar; do
   echo "Jar файл изменён, перезапускаем..."
   shutdown_app
   run_app

@@ -9,7 +9,7 @@ version = '0.1'
 sourceCompatibility = '17'
 
 application {
-    mainClass = "ru.arooid.financial.gateway.Application"
+    mainClass = "ru.arooid.financial.account.Application"
 }
 
 repositories {
@@ -32,6 +32,13 @@ dependencies {
     implementation "io.micronaut.reactor:micronaut-reactor"
     implementation "io.micronaut.security:micronaut-security"
     implementation "io.micronaut.security:micronaut-security-jwt"
+    implementation "io.micronaut.security:micronaut-security-oauth2"
+
+    implementation 'io.micronaut.r2dbc:micronaut-data-r2dbc:1.1.1'
+    implementation 'io.micronaut.data:micronaut-data-r2dbc:4.13.1'
+    implementation 'io.r2dbc:r2dbc-postgresql:0.8.13.RELEASE'
+    implementation 'io.micronaut.nats:micronaut-nats:4.6.0'
+
     runtimeOnly "io.micronaut.validation:micronaut-validation"
 
     compileOnly 'org.projectlombok:lombok:1.18.28'

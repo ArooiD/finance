@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/transaction/ZeroTrust.core.transaction.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/transaction/ZeroTrust.core.transaction.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/user/ZeroTrust.core.user.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/user/ZeroTrust.core.user.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/gateway/gateway.iml" filepath="$PROJECT_DIR$/core/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/account/ru.arooid.financial.ZeroTrust.core.account.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/account/ru.arooid.financial.ZeroTrust.core.account.main.iml" />
     </modules>
   </component>
 </project>
